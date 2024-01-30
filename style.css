@@ -1,0 +1,56 @@
+        .main { 
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #ff8c00, #ff4b2b);
+            overflow: hidden;
+            animation: gradientAnimation 10s linear infinite alternate-reverse;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animated-object {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: objectAnimation 4s ease-in-out infinite alternate;
+        }
+
+        .object1 {
+            top: 10%;
+            left: 20%;
+            animation-duration: 6s;
+        }
+
+        .object2 {
+            top: 50%;
+            left: 70%;
+            animation-duration: 5s;
+        }
+
+        .object3 {
+            top: 80%;
+            left: 40%;
+            animation-duration: 4s;
+        }
+
+        @keyframes objectAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
